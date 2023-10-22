@@ -17,7 +17,7 @@ public class Atividade3 {
         int numeroSorteado;
             System.out.print("\nDigite um número de 1 a 100: ");
             numeroEscolhido = scanner.nextInt();
-            numeroSorteado = (int)(Math.random()* 101);
+            numeroSorteado = (int)(Math.random()* 100) + 1;
         while(numeroEscolhido != numeroSorteado){
             System.out.println("\nO número sorteado foi: " + numeroSorteado + "\nO seu número é: " + numeroEscolhido);
             System.out.print("\nDigite outro número: ");
