@@ -1,4 +1,4 @@
-package com.mycompany.aula03;
+package oo.java;
 
 public class Aula3Ex02 {
     public static void main(String[] args) {

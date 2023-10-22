@@ -1,4 +1,4 @@
-package com.mycompany.aula03; // Importa o Pacote
+package oo.java; // Importa o Pacote
 import java.util.Scanner;// Importa a Classe Scanner
 
 public class Aula3ex1 {

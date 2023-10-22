@@ -1,4 +1,4 @@
-package com.mycompany.aula03;
+package oo.java;
 
 public class Pessoa {
     char sexo;

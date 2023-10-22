@@ -1,4 +1,4 @@
-package com.mycompany.aula03;
+package oo.java;
 import java.util.Scanner;
 
 public class Atividade2{
