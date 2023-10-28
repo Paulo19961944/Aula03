@@ -7,7 +7,7 @@ public class Atividade4 {
         int numero = scanner.nextInt();
         System.out.println();
         while(numero >=0) {
-            System.out.println("O número é: " + numero);
+            System.out.println(numero + " segundos");
             numero -= 1;
             try {
                 Thread.sleep(1000);
