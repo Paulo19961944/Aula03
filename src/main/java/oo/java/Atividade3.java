@@ -1,29 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package oo.java;
 import java.util.Scanner;
+import java.util.Random;
 
-/**
- *
- * @author paulo
- */
 public class Atividade3 {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int numeroEscolhido;
-        int numeroSorteado;
-            System.out.print("\nDigite um número de 1 a 100: ");
-            numeroEscolhido = scanner.nextInt();
-            numeroSorteado = (int)(Math.random()* 100) + 1;
-        while(numeroEscolhido != numeroSorteado){
-            System.out.println("\nO número sorteado foi: " + numeroSorteado + "\nO seu número é: " + numeroEscolhido);
-            System.out.print("\nDigite outro número: ");
-            numeroEscolhido = scanner.nextInt();
-            numeroSorteado = (int) (Math.random() * 100) + 1;
-        }
-        System.out.println("Parabéns !!! O Seu numero é: " + numeroEscolhido + " e o numero sorteado é: " + numeroSorteado);
+        Random random = new Random();
+        int numero = random.nextInt();
+        int tentativas = 0;
+        int palpite;
+        System.out.println("Sua sorte será lançada! Para conseguir sair da aula, você precisa decobrir um número de 0 a 100. Que comecem os jogos!");
+        do{
+            System.out.println("Digite o seu palpite: ");
+            palpite = scanner.nextInt();
+            tentativas++;
+            if (palpite < numero){
+                System.out.println("Tente um número maior...");
+            } else if (palpite > numero){
+                System.out.println("Tente um número menor...");
+            } else {
+                System.out.println("Após " + tentativas +" Você venceu e está livre!");  
+            }
+        } while (palpite != numero);
     }
 }
