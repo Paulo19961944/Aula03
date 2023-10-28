@@ -20,7 +20,8 @@ public class Atividade3 {
             } else if (tentativas < 5 && palpite > numero){
                 System.out.println("Tente um numero menor...");
             } else if(tentativas ==5){
-                System.out.println("Você foi condenado a ficar na sala pelo resto de seus dias!!!");
+                System.out.println("Você foi condenado a ficar na sala pelo resto de seus dias!!! ");
+                break;
             } else{
                 System.out.println("Após " + tentativas + " tentativas você concluiu o objetivo!!!");
             }
