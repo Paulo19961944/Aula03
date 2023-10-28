@@ -6,21 +6,24 @@ public class Atividade3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-        int numero = random.nextInt();
+        int numero = random.nextInt(100)+1;
         int tentativas = 0;
         int palpite;
-        System.out.println("Sua sorte será lançada! Para conseguir sair da aula, você precisa decobrir um número de 0 a 100. Que comecem os jogos!");
+        System.out.println("\nSua sorte será lançada! Para conseguir sair da aula, \nvocê precisa descobrir um número de 0 a 100. Que comecem os jogos!\nVocê tem 5 chances.");
         do{
-            System.out.println("Digite o seu palpite: ");
+            System.out.print("\nDigite o seu palpite: ");
             palpite = scanner.nextInt();
             tentativas++;
-            if (palpite < numero){
-                System.out.println("Tente um número maior...");
-            } else if (palpite > numero){
-                System.out.println("Tente um número menor...");
-            } else {
-                System.out.println("Após " + tentativas +" Você venceu e está livre!");  
+
+            if (tentativas < 5 && palpite < numero){
+                System.out.println("Tente um numero maior... ");
+            } else if (tentativas < 5 && palpite > numero){
+                System.out.println("Tente um numero menor...");
+            } else if(tentativas ==5){
+                System.out.println("Você foi condenado a ficar na sala pelo resto de seus dias!!!");
+            } else{
+                System.out.println("Após " + tentativas + " tentativas você concluiu o objetivo!!!");
             }
-        } while (palpite != numero);
+        } while (palpite != numero && tentativas <=5);
     }
 }
